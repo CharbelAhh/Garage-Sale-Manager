@@ -1,0 +1,12 @@
+DELETE FROM audit_logs WHERE 1;
+DELETE FROM payment_history WHERE 1;
+DELETE FROM order_history WHERE 1;
+DELETE FROM ordereditems WHERE 1;
+DELETE FROM orders WHERE 1;
+DELETE FROM locationstock WHERE 1;
+DELETE FROM productbrands WHERE 1;
+DELETE FROM products WHERE 1;
+DELETE FROM locations WHERE 1;
+DELETE FROM categories WHERE 1;
+DELETE FROM brand WHERE 1;
+DELETE FROM clients WHERE 1;

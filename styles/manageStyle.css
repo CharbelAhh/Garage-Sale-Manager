@@ -1,0 +1,853 @@
+main.data-manager section#remove-options {
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+
+    padding-bottom:1rem;
+    border-bottom: solid 1px rgba(0,0,0,.2);
+}
+
+main.data-manager section#remove-options form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:.5rem;
+}
+main.data-manager section#remove-options form button{
+    padding:.2rem 1rem;
+    border:none;
+    background-color: var(--color1);
+    color:white;
+    transition: .3s;
+}
+main.data-manager section#remove-options form button:hover{
+    background-color: var(--color3);
+}
+
+main.data-manager section#remove-options div.remove-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:.5rem;
+}
+main.data-manager section#remove-options div.remove-items div.remove-options{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border:solid 1px;
+
+    max-height:20vh;
+    overflow-y: auto;
+    padding-inline: .5rem;
+}
+main.data-manager section#remove-options div.remove-items div.del-option{
+    width:100%;
+    display: flex;
+    gap:.5rem;
+    align-items: center;
+    justify-content: space-between;
+    
+    border-bottom: solid 1px;
+    font-size: 1.1rem;
+    padding:.5rem;
+    text-align: center;
+}
+main.data-manager section#remove-options div.remove-items div.del-option input[type="checkbox"]{
+    transform: scale(125%);
+}
+
+main.data-manager section#audit-logs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap:1rem;
+
+    width:100%;
+}
+main.data-manager section#audit-logs .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap:.5rem;
+}
+main.data-manager section#audit-logs table#logs-content{
+    width:100%;
+}
+main.data-manager section#audit-logs table#logs-content td{
+    padding:.5rem 1.3rem;
+    text-align: center;
+    max-width: 20vw;
+    text-wrap: wrap;
+}
+main.data-manager section#audit-logs table#logs-content thead td{
+    background-color: rgba(0,0,0,.4);
+    color:white;
+}
+main.data-manager section#audit-logs table#logs-content tbody tr{
+    background-color: white;
+}
+
+/* CLIENT DATA SEARCH STYLE START */
+main.data-manager section#manage-clients {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap:1rem;
+
+    width:100%;
+}
+main.data-manager section#manage-clients .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap:.5rem;
+    width:100%;
+}
+main.data-manager section#manage-clients .client-searcher {
+    width:100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap:.5rem;
+}
+main.data-manager section#manage-clients .client-searcher input[type="search"]{
+    width:100%;
+    padding:.6rem .4rem;
+    border: solid 1px rgba(0,0,0,.3);
+    border-radius: .1rem;
+    font-size: 1.1rem;
+    outline: none;
+}
+main.data-manager section#manage-clients .client-searcher button{
+    padding:.6rem 1.2rem;
+    border:none;
+    background-color: var(--color1);
+    color:white;
+    transition: .3s;
+    border-radius: .1rem;
+    font-size: 1.1rem;
+}
+main.data-manager section#manage-clients .client-searcher button:hover{
+    background-color: var(--color3);
+}
+
+main.data-manager section#manage-clients .add-client-section #add-client-btn{
+    padding:.6rem 1.2rem;
+    border:none;
+    background-color: var(--color1);
+    color:white;
+    transition: .3s;
+    border-radius: .1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+main.data-manager section#manage-clients .add-client-section #add-client-form{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    gap:.5rem;
+    padding:1rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 5px 3px rgba(0,0,0,.2);
+    background-color: rgba(255,255,255,.9);
+}
+main.data-manager section#manage-clients .add-client-section #add-client-form.active{
+    display: flex;
+}
+main.data-manager section#manage-clients .add-client-section #add-client-form h2{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+main.data-manager section#manage-clients .add-client-section #add-client-form p{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap:.5rem;
+}
+main.data-manager section#manage-clients .add-client-section #add-client-form p input{
+    border: solid 1px rgba(0,0,0,.3);
+    padding:.3rem .5rem;
+    border-radius: .2rem;
+    font-size: 1rem;
+    outline: none;
+}
+main.data-manager section#manage-clients .add-client-section #add-client-form p textarea{
+    width:50%;
+    border: solid 1px rgba(0,0,0,.3);
+    padding:.3rem .5rem;
+    border-radius: .2rem;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+}
+main.data-manager section#manage-clients .add-client-section #add-client-form input[type="submit"]{
+    border:none;
+    padding:.4rem 1rem;
+    background-color: var(--color1);
+    color:white;
+    font-size: 1rem;
+    transition: .3s;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+main.data-manager section#manage-clients .add-client-section #add-client-form input[type="submit"]:hover{
+    background-color: var(--color3);
+}
+
+main.data-manager section#manage-clients .add-client-section #add-client-form button#cancel-add-client-btn{
+    border:none;
+    padding:.4rem 1rem;
+    background-color: rgb(210,210,210);
+    color:black;
+    font-size: 1rem;
+    transition: .3s;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+main.data-manager section#manage-clients .add-client-section #add-client-form button#cancel-add-client-btn:hover{
+    background-color: rgb(180,180,180);
+}
+
+main.data-manager section#manage-clients #add-client-btn:hover{
+    background-color: var(--color3);
+}
+
+main.data-manager section#manage-clients .clients-container {
+    width:100%;
+    overflow-x: auto;
+}
+main.data-manager section#manage-clients table#clients-data{
+    width:100%;
+}
+main.data-manager section#manage-clients table#clients-data td{
+    padding:.5rem 1.3rem;
+    text-align: center;
+    max-width: 20vw;
+    text-wrap: wrap;
+}
+main.data-manager section#manage-clients table#clients-data td button{
+    border:none;
+    background-color: transparent;
+    color: var(--color1);
+    transition: .3s;
+    font-size: 1.5rem;
+    border-radius: .3rem;
+}
+
+main.data-manager section#manage-clients table#clients-data thead td{
+    background-color: rgba(0,0,0,.4);
+    color:white;
+}
+main.data-manager section#manage-clients table#clients-data tbody tr{
+    background-color: white;
+}
+
+main.data-manager section#manage-clients .client-info-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width:70%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    background-color: rgba(255,255,255,.9);
+    border-radius: .5rem;
+    transition: .3s;
+    box-shadow: 0 0 5px 3px rgba(0,0,0,.2);
+}
+main.data-manager section#manage-clients .client-info-modal.active {
+    display: flex;
+}
+
+main.data-manager section#manage-clients .client-info-modal .client-info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    width:100%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+main.data-manager section#manage-clients .client-info-modal .client-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding:1rem;
+    gap:1rem;
+    border-bottom: solid 1px rgba(0,0,0,.2);
+    width:100%;
+}
+main.data-manager section#manage-clients .client-info-modal .client-info-top .close-client-info{
+    border:none;
+    padding: .2rem .5rem;
+    background-color: red;
+    color:white;
+    font-size: 1rem;
+    transition: .3s;
+    border-radius: .3rem;
+}
+main.data-manager section#manage-clients .client-info-modal .client-info-top .close-client-info:hover{
+    background-color: rgba(200,0,0);
+}
+main.data-manager section#manage-clients .client-info-modal .client-edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    gap:1rem;
+    padding:1rem;
+    width:100%;
+    /* border-bottom: solid 1px rgba(0,0,0,.2); */
+}
+main.data-manager section#manage-clients .client-info-modal .client-delete-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    gap:.5rem;
+    padding:1rem;
+    width:100%;
+    margin-bottom: 1rem;
+}
+main.data-manager section#manage-clients .client-info-modal .client-delete-form .delete-client-btn{
+    border:none;
+    padding:.4rem 1rem;
+    background-color: red;
+    color:white;
+    font-size: 1rem;
+    transition: .3s;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+main.data-manager section#manage-clients .client-info-modal .client-delete-form .delete-client-btn:hover{
+    background-color: darkred;
+}
+
+main.data-manager section#manage-clients .client-info-modal .client-delete-form .confirm-delete-client-modal{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    padding:1rem;
+    border: solid 1px rgba(0,0,0,.3);
+    background-color: white;
+    border-radius: .2rem;
+}
+main.data-manager section#manage-clients .client-info-modal .client-delete-form .confirm-delete-client-modal.active{
+    display: flex;
+}
+
+main.data-manager section#manage-clients .client-info-modal .client-delete-form .confirm-delete-client-modal p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+main.data-manager section#manage-clients .client-info-modal .client-delete-form .confirm-delete-client-modal .box-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+
+main.data-manager section#manage-clients .client-info-modal .client-delete-form .confirm-delete-client-modal .box-options button{
+    padding:.4rem 1rem;
+    border:none;
+    background-color: var(--color1);
+    color:white;
+    font-size: 1rem;
+    transition: .3s;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+main.data-manager section#manage-clients .client-info-modal .client-delete-form .confirm-delete-client-modal .box-options button:hover{
+    background-color: var(--color3);
+}
+
+
+main.data-manager section#manage-clients .client-info-modal .client-edit-form p{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap:.5rem;
+}
+main.data-manager section#manage-clients .client-info-modal .client-edit-form p input{
+    border: solid 1px rgba(0,0,0,.3);
+    padding:.3rem .5rem;
+    border-radius: .2rem;
+    font-size: 1rem;
+    outline: none;
+}
+main.data-manager section#manage-clients .client-info-modal .client-edit-form p textarea{
+    width:50%;
+    border: solid 1px rgba(0,0,0,.3);
+    padding:.3rem .5rem;
+    border-radius: .2rem;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+}
+main.data-manager section#manage-clients .client-info-modal .client-edit-form input[type="submit"]{
+    border:none;
+    padding:.4rem 1rem;
+    background-color: var(--color1);
+    color:white;
+    font-size: 1rem;
+    transition: .3s;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+main.data-manager section#manage-clients .client-info-modal .client-edit-form input[type="submit"]:hover{
+    background-color: var(--color3);
+}
+
+main.data-manager section#manage-clients .client-info-modal .client-orders-info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    gap:1rem;
+    padding:1rem;
+    width:100%;
+    border-bottom: solid 1px rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+}
+main.data-manager section#manage-clients .client-info-modal .client-orders-info .orders-client-btn {
+    border:none;
+    padding:.4rem 1rem;
+    background-color: var(--color1);
+    color:white;
+    font-size: 1rem;
+    transition: .3s;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+main.data-manager section#manage-clients .client-info-modal .client-orders-info .orders-client-btn:hover{
+    background-color: var(--color3);
+}
+
+main.data-manager section#manage-clients .client-info-modal .all-client-orders {
+    display: none;
+    align-items: stretch;
+    justify-content: center;
+    
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.2);
+}
+main.data-manager section#manage-clients .client-info-modal .all-client-orders.active {
+    display: flex;
+}
+main.data-manager section#manage-clients .client-info-modal .client-purchases-section{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    padding:1rem;
+    gap:.5rem;
+}
+
+main.data-manager section#manage-clients .client-info-modal .purshases-list{
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+    padding:1rem;
+    max-height: 30vh;
+    overflow-y: auto;
+    width:300px;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item{
+    border: solid 1px rgba(0,0,0,.2);
+    padding:.5rem;
+    display: flex;
+    flex-direction: column;
+    gap:.3rem;
+    background-color: white;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding:.5rem;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item p.order-date b{
+    display: inline-block;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item button.open-order{
+    background-color: var(--color1);
+    border: 1px solid black;
+    padding:.3rem .5rem;
+    transition: .3s;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item button.open-order:hover{
+    background-color: var(--color3);
+}
+/* GO HERE */
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-bar{
+    width:100%;
+    background-color: rgba(200,200,255);
+    padding:unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-bar span{
+    padding:.5rem;
+    display: inline-block;
+    width:100%;
+    background-position: left;
+    background-image: linear-gradient(var(--color1),var(--color1));
+    background-repeat: no-repeat;
+    transition: .3s;
+    animation:fill 2s !important;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-bar button.add-payment-btn{
+    padding:.5rem .6rem;
+    background-color: transparent;
+    border:solid var(--color1);
+    background-color: white;
+}
+
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-form{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-bottom:solid 1px;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-form.active{
+    display: flex;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-form input{
+    border:none;
+    outline: none;
+    padding:.5rem;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-form button{
+    outline: none;
+    border:none;
+    padding:.5rem;
+    background-color: white;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item p span.paid{
+    color:white;
+    background-color:rgba(50,150,50);
+    padding:.2rem .5rem;
+    border-radius: .5rem;
+}
+
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section {
+    width:100%;
+    border:solid 1px black;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap:.5rem;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content.active {
+    display: flex;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    border:solid 1px;
+    background-color: rgba(0,0,0,.04);
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:.2rem;
+    gap:.3rem;
+}
+
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-i div span.pay_amt{
+    color:rgba(50,150,50);
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-i div span.neg{
+    color:rgba(200,50,50);
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i .cancel-payment-btn {
+    width:100%;
+    padding:.2rem;
+    color:red;
+    border:solid 1px black;
+    outline:none;
+    background-color: white;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i .cancel-payment-form {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.5rem;
+
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    background-color: white;
+    padding:1rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 5px 3px rgba(0,0,0,.2);
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i .cancel-payment-form.active{
+    display: flex;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i .cancel-payment-form .form-top{
+    display: inline-block;
+    text-align: center;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i .cancel-payment-form .form-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i .cancel-payment-form .form-options button{
+    padding:.3rem .7rem;
+    border:solid 1px;
+    background-color: white;
+    transition: .3s;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i .cancel-payment-form .form-options button.confirm-btn{
+    color:black;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i .cancel-payment-form .form-options button.confirm-btn{
+    color:red;
+}
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-content .payment-history-i .cancel-payment-form .form-options button:hover{
+    background-color: rgba(0,0,0,.2);
+}
+
+main.data-manager section#manage-clients .client-info-modal .purshases-list .purchase-item .payment-history-section .payment-history-btn {
+    padding:.2rem;
+    width:100%;
+    border:transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:.5rem;
+    background-color: transparent;
+}
+
+main.data-manager section#manage-clients .client-info-modal .order-content-box {
+    display: none;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    gap:.5rem;
+    width:50%;
+
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.2);
+}
+main.data-manager section#manage-clients .client-info-modal .order-content-box.active {
+    display: flex;
+}
+
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-info-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding:1rem;
+    background-color: var(--color1);
+}
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-items-list {
+    display: flex;
+    flex-direction: column; /* keep column stacking */
+    justify-content: flex-start; /* stack from top */
+    align-items: stretch; /* full width */
+    max-height: 50vh;
+    overflow-y: auto;
+    width: 100%;
+    gap:1rem;
+}
+
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width:100%;
+}
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-item .order-item-top{
+    border:solid 1px rgba(0,0,0,.2);
+    border-inline:0;
+}
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-item div{
+    width:100%;
+    padding:.5rem;
+}
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-item .order-item-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-item .order-item-content p{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem;
+    padding:.5rem;
+}
+
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-item .order-item-content button{
+    background-color: white;
+    width:100%;
+    padding:.3rem;
+    outline: none;
+    border:solid 1px;
+    color:black;
+}
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-item .order-item-content form.item-del-form {
+    display: none;
+    flex-direction: column;
+    gap:.3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: .3rem;;
+}
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-item .order-item-content form.item-del-form.active {
+    display: flex;
+}
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-item .order-item-content form.item-del-form button{
+    background-color: red;
+    color:white;
+    transition: .3s;
+    border:none
+}
+main.data-manager section#manage-clients .client-info-modal .order-content-box .order-item .order-item-content form.item-del-form button:hover{
+    background-color: rgba(200,0,0);
+}
+
+@keyframes fill {
+    from {
+        background-size: 0% 100%;
+    }
+}
+
+/* CLIENT DATA SEARCH STYLE END */
+
+@media (max-width: 768px) {
+    main.data-manager section#remove-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    main.data-manager section#remove-options form {
+        width: 100%;
+    }
+    
+    main.data-manager section#remove-options div.remove-items {
+        width: 100%;
+    }
+    
+    main.data-manager section#remove-options div.remove-items div.remove-options {
+        max-height: 15vh;
+    }
+    
+    main.data-manager section#remove-options div.remove-items div.del-option {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+    
+    main.data-manager section#audit-logs .top {
+        align-items: center;
+    }
+    
+    main.data-manager section#audit-logs table#logs-content {
+        font-size: 0.9rem;
+    }
+    
+    main.data-manager section#audit-logs table#logs-content td {
+        padding: 0.4rem 1rem;
+    }
+
+    main.data-manager section#manage-clients .client-info-modal .purshases-list{
+        width:100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main.data-manager section#remove-options div.remove-items div.remove-options {
+        max-height: 10vh;
+    }
+    
+    main.data-manager section#remove-options div.remove-items div.del-option {
+        font-size: 0.9rem;
+        padding: 0.3rem;
+    }
+    
+    main.data-manager section#remove-options div.remove-items div.del-option input[type="checkbox"] {
+        transform: scale(100%);
+    }
+    
+    main.data-manager section#audit-logs table#logs-content {
+        font-size: 0.8rem;
+    }
+    
+    main.data-manager section#audit-logs table#logs-content td {
+        padding: 0.3rem 0.5rem;
+    }
+    
+    main.data-manager section#audit-logs table#logs-content thead td {
+        padding: 0.4rem;
+    }
+}

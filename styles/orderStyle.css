@@ -1,0 +1,963 @@
+/* Add Order Button Styles */
+section#add-order-btn button#add-order {
+    padding: 0.7rem 2rem;
+    color: white;
+    background-color: var(--color1);
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,.2);
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+section#add-order-btn button#add-order:hover {
+    background-color: var(--color3);
+}
+
+/* Client Form Styles */
+section#add-order-btn form#client-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.2);
+    z-index: 4;
+    padding: 1.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 500px;
+}
+
+section#add-order-btn form#client-form.active {
+    display: flex;
+}
+
+section#add-order-btn form#client-form .top-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: solid 1px rgba(0,0,0,.1);
+    padding-bottom: 1rem;
+}
+
+section#add-order-btn form#client-form .top-form #close-clientform {
+    padding: 0.2rem 0.45rem;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 0.2rem;
+}
+
+section#add-order-btn form#client-form .fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+section#add-order-btn form#client-form .fields .field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+section#add-order-btn form#client-form .fields .field label {
+    font-weight: bold;
+    color: #333;
+}
+
+section#add-order-btn form#client-form .fields .field input {
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    border: solid 1px #ccc;
+    width: 100%;
+    font-size: 1rem;
+}
+
+section#add-order-btn form#client-form #submit-client {
+    padding: 0.7rem 1.5rem;
+    color: white;
+    border-radius: 0.4rem;
+    border: solid 1px;
+    background-color: var(--color1);
+    transition: 0.3s;
+    font-size: 1rem;
+    width: 100%;
+}
+
+section#add-order-btn form#client-form #submit-client:hover {
+    background-color: var(--color3);
+}
+
+/* Order Form Styles */
+section#add-order-btn form.orderForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(85%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.5rem;
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,.2);
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    overflow-x: hidden;
+    width: 90%;
+    max-width: 600px;
+    z-index: 1;
+}
+
+section#add-order-btn form.orderForm.visible {
+    display: flex;
+}
+
+section#add-order-btn form.orderForm .top-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,.4);
+}
+
+section#add-order-btn form.orderForm .top-form button#close-order {
+    background-color: red;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+}
+
+section#add-order-btn form.orderForm .field.client-name {
+    width: 100%;
+}
+
+section#add-order-btn form.orderForm .field.client-name label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+section#add-order-btn form.orderForm .field.client-name #select-client {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    border: solid 1px #ccc;
+    background-color: white;
+    text-align: left;
+    font-size: 1rem;
+}
+
+section#add-order-btn form.orderForm .field.client-name .manage-clients {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+
+    width: 95%;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: white;
+    border: solid 1px #ccc;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    z-index: 3;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+section#add-order-btn form.orderForm .field.client-name .manage-clients.active {
+    display: flex;
+}
+
+section#add-order-btn form.orderForm .field.client-name .manage-clients #add-client {
+    padding-block: 0.4rem;
+    width: 90%;
+    border: none;
+    background-color: var(--color1);
+    color: white;
+    margin-top: 1rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+
+section#add-order-btn form.orderForm .field.client-name .manage-clients .clients-list {
+    height: 100%;
+    margin-top: 0.3rem;
+    width: 90%;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top:.5rem;
+    margin-bottom: .5rem;
+}
+
+section#add-order-btn form.orderForm .field.client-name .manage-clients .clients-list .client-option {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: rgba(0,0,0,.05);
+    transition: 0.3s;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    text-align: left;
+    padding: .45rem .6rem;
+    border-radius: .2rem;
+}
+
+section#add-order-btn form.orderForm .field.client-name .manage-clients .clients-list .client-option:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+section#add-order-btn form.orderForm .field.client-name .manage-clients .clients-list .client-option:last-child {
+    border-bottom: none;
+}
+
+section#add-order-btn form.orderForm .field.client-name .clients-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width:80%
+}
+section#add-order-btn form.orderForm .field.client-name .clients-search #client-search {
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+    border: solid 1px #ccc;
+    width: 100%;
+    font-size: 1rem;
+}
+
+section#add-order-btn form.orderForm .main-form .page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    width: 100%;
+}
+
+section#add-order-btn form.orderForm .main-form .page.right {
+    animation: slide-left 0.4s;
+}
+
+section#add-order-btn form.orderForm .main-form .page.left {
+    animation: slide-right 0.4s;
+}
+
+section#add-order-btn form.orderForm .main-form .page.hidden {
+    display: none;
+}
+
+section#add-order-btn form.orderForm .field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+section#add-order-btn form.orderForm .field label {
+    font-weight: bold;
+    color: #333;
+}
+
+section#add-order-btn form.orderForm .field select,
+section#add-order-btn form.orderForm .field textarea {
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    border: solid 1px #ccc;
+    background-color: white;
+    width: 100%;
+    font-size: 1rem;
+    resize: none;
+}
+
+section#add-order-btn form.orderForm .bottom-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+section#add-order-btn form.orderForm .bottom-order #add-page {
+    padding: 0.6rem 2rem;
+    background-color: var(--color1);
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+section#add-order-btn form.orderForm .bottom-order #add-page:hover {
+    background-color: var(--color3);
+}
+
+section#add-order-btn form.orderForm .bottom-order #rem-page {
+    padding: 0.6rem 1rem;
+    background-color: red;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+section#add-order-btn form.orderForm .bottom-order #rem-page:hover {
+    background-color: rgba(200,0,0);
+}
+
+section#add-order-btn form.orderForm .bottom-order #rem-page.hidden {
+    display: none;
+}
+
+section#add-order-btn form.orderForm .bottom-order .page-nb {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+section#add-order-btn form.orderForm .bottom-order .page-nb.hidden {
+    display: none;
+}
+
+section#add-order-btn form.orderForm .bottom-order .page-nb .page-arrow {
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    transition: 0.3s;
+    background-color: rgba(0,0,0,.05);
+    font-size: 1rem;
+}
+
+section#add-order-btn form.orderForm .bottom-order .page-nb .page-arrow:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+section#add-order-btn form.orderForm .bottom-order .confirm-del {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,.4);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+section#add-order-btn form.orderForm .bottom-order .confirm-del.hidden {
+    display: none;
+}
+
+section#add-order-btn form.orderForm .bottom-order .confirm-del .content {
+    background-color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+section#add-order-btn form.orderForm .bottom-order .confirm-del .content h1 {
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+section#add-order-btn form.orderForm .bottom-order .confirm-del .content .confirm-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+section#add-order-btn form.orderForm .bottom-order .confirm-del .content .confirm-btns .confirm-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section#add-order-btn form.orderForm .bottom-order .confirm-del .content .confirm-btns .confirm-btn.yes {
+    background-color: red;
+    color: white;
+}
+
+section#add-order-btn form.orderForm .bottom-order .confirm-del .content .confirm-btns .confirm-btn.no {
+    background-color: var(--color1);
+    color: white;
+}
+
+section#add-order-btn form.orderForm #submit-order {
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--color1);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+section#add-order-btn form.orderForm #submit-order:hover {
+    background-color: var(--color3);
+}
+
+/* No Orders Section */
+section#no-orders:not([class="visible"]) {
+    display: none;
+}
+
+section#no-orders {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,.2);
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Orders Section */
+section#orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+    width: 100%;
+    max-height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 1rem 0;
+}
+
+/* Individual Order Styles */
+section#orders .order {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    width: 95%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+}
+
+section#orders .order .top-order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    width: 100%;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+section#orders .order .top-order h3 {
+    display: inline;
+    color: var(--color1);
+    font-weight: bold;
+    margin: 0;
+}
+
+section#orders .order .top-order .orderDate {
+    color: rgba(0,0,0,.5);
+    font-size: 1rem;
+}
+
+section#orders .order-infos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+/* Order Items Grid */
+.order-items-container {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.order-items-labels {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    background-color: var(--color1);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.order-item-label {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255,255,255,.2);
+}
+
+.order-item-label:last-child {
+    border-right: none;
+}
+
+.order-items-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+}
+
+.order-item-cell {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+
+.order-item-cell:nth-child(5n) {
+    border-right: none;
+}
+
+.order-items-grid > .order-item-cell:last-child {
+    border-bottom: none;
+}
+
+.descboxcontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.prod-desc-box {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateY(-50%) translateX(-15%); 
+    background-color: white;
+    border:solid 2px black;
+    width:100%;
+    height: auto;
+    padding: .4rem 1rem;
+    border-radius: .5rem;
+    border-bottom-left-radius: 0;
+}
+
+.prod-desc-box.visible {
+    display: block;
+}
+
+.prod-desc-box.visible {
+    display: block;
+}
+
+.order-item-cell.order_product_name {
+    width:100%;
+}
+.order-item-cell.order_product_name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+
+.order-total {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0,0,0,.05);
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.order-total-label {
+    margin-right: 1rem;
+}
+
+hr {
+    outline:none;
+    border:none;
+    height:2px;
+    background-color: rgba(0,0,0,.1);
+}
+
+.order-total-value {
+    color: var(--color1);
+}
+.order-gain-value {
+    color: var(--color1);
+}
+
+/* Order Options */
+section#orders .order .showOptions {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    transition: 0.3s;
+    background-color: rgba(0,0,0,.05);
+    align-self: flex-end;
+}
+
+section#orders .order .showOptions:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+section#orders .order .order-options,
+section#orders #box-cancel-order,
+section#orders #box-complete-order {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 500px;
+    z-index: 10;
+}
+
+section#orders .order .order-options.visible,
+section#orders #box-cancel-order.visible,
+section#orders #box-complete-order.visible {
+    display: flex;
+}
+
+section#orders .order .order-options .options-top,
+section#orders #box-cancel-order .options-top,
+section#orders #box-complete-order .options-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-bottom: 1rem;
+}
+
+section#orders .order .order-options .options-top h1,
+section#orders #box-cancel-order .options-top h1,
+section#orders #box-complete-order .options-top h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+section#orders .order .order-options .options-top button.close-options,
+section#orders #box-cancel-order .options-top button.close-options,
+section#orders #box-complete-order .options-top button.close-options {
+    background-color: red;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+}
+
+section#orders .order .order-options .options,
+section#orders #box-cancel-order .options-top,
+section#orders #box-complete-order .options-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+section#orders .order .order-options .options button,
+section#orders #box-cancel-order form button,
+section#orders #box-complete-order form button {
+    padding: 0.7rem 1rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 1;
+}
+section#orders #box-complete-order form button {
+    background-color: var(--color1);
+    color:white;
+}
+
+section#orders .order .order-options .options button.cancel-order {
+    background-color: rgba(0,0,0,.1);
+    color: white;
+}
+
+section#orders .order .order-options .options button.complete-order {
+    background-color: rgba(0,200,0,.8);
+    color: white;
+}
+
+section#orders #box-cancel-order p{
+    font-size: 1.1rem;
+}
+section#orders #box-cancel-order p span{
+    color:var(--color1);
+    font-weight: bold;
+}
+
+section#orders #box-complete-order p{
+    font-size: 1.1rem;
+}
+section#orders #box-complete-order span{
+    color: rgba(0,0,0,.5);
+}
+section#orders #box-complete-order p span{
+    color:var(--color1);
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    section#add-order-btn button#add-order {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    section#add-order-btn form#client-form {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    section#add-order-btn form.orderForm {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    section#add-order-btn form.orderForm .field {
+        gap: 0.3rem;
+    }
+    
+    section#add-order-btn form.orderForm .field select,
+    section#add-order-btn form.orderForm .field.client-name #select-client {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    section#add-order-btn form.orderForm .bottom-order {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    section#add-order-btn form.orderForm .bottom-order .page-nb {
+        order: -1;
+    }
+    
+    section#orders {
+        max-height: 400px;
+    }
+    
+    section#orders .order {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    section#orders .order .top-order {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    section#orders .order-infos {
+        gap: 1rem;
+    }
+    
+    section#orders .order .order-options {
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    section#orders .order .order-options .options {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    section#orders .order .order-options .options button {
+        width: 100%;
+        padding: 0.6rem;
+    }
+    
+    /* Order items grid responsive styles */
+    .order-items-labels,
+    .order-items-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-item-label,
+    .order-item-cell {
+        border: none;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        justify-content: flex-start;
+    }
+    
+    .order-item-label:before,
+    .order-item-cell:before {
+        content: attr(data-label) ": ";
+        font-weight: bold;
+        display: inline-block;
+        width: 120px;
+        margin-right: 10px;
+    }
+    
+    .order-item-label {
+        background-color: var(--color1);
+        color: white;
+    }
+    
+    .order-total {
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+    
+    .order-total-label {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section#add-order-btn button#add-order {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    section#add-order-btn form#client-form {
+        width: 95%;
+        padding: 0.8rem;
+    }
+    
+    section#add-order-btn form#client-form .fields .field input,
+    section#add-order-btn form#client-form .fields .field label {
+        font-size: 0.9rem;
+    }
+    
+    section#add-order-btn form#client-form #submit-client {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    section#add-order-btn form.orderForm {
+        width: 95%;
+        padding: 0.8rem;
+    }
+    
+    section#add-order-btn form.orderForm .top-form {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    section#add-order-btn form.orderForm .field.client-name .manage-clients {
+        width: 95%;
+    }
+    
+    section#add-order-btn form.orderForm .field select,
+    section#add-order-btn form.orderForm .field.client-name #select-client {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    section#add-order-btn form.orderForm .bottom-order #add-page {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    section#add-order-btn form.orderForm .bottom-order #rem-page {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    section#add-order-btn form.orderForm #submit-order {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    section#orders .order .order-options {
+        width: 95%;
+        padding: 0.8rem;
+    }
+    
+    section#orders .order .order-options .options-top h1 {
+        font-size: 1.1rem;
+    }
+    
+    section#orders .order .order-options .options button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Order items grid mobile styles */
+    .order-item-label:before,
+    .order-item-cell:before {
+        width: 100px;
+        font-size: 0.9rem;
+    }
+    
+    .order-item-label,
+    .order-item-cell {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .order-total {
+        padding: 0.8rem;
+        font-size: 1.1rem;
+    }
+}

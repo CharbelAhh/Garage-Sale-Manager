@@ -1,0 +1,643 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: white;
+    padding:1rem;
+    padding-block:.5rem;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.3);
+}
+
+header .title{
+    font-size: 1.6rem;
+    font-family: "inter-bold";
+    padding:1rem;
+
+    color:var(--color1);
+}
+
+header .hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+header .nav-bar {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+}
+
+header .nav-bar .nav-btn{
+    background: none;
+    border:none;
+    outline:none;
+    font-size: 1rem;
+
+    transition: .2s;
+}
+header .nav-bar .nav-btn.active, header .nav-bar .nav-btn:hover{
+    color:var(--color1);
+}
+
+header .addparts{
+    display: flex;
+    gap:.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+header .additems .add-forms {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0,0,0,.4);
+    height:100%;
+    width:100%;
+    overflow-y: hidden;
+
+    z-index: 2;
+}
+header .additems .add-forms.show {
+    display: flex;
+}
+
+header .additems .add-forms form{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap:1rem;
+
+    padding:3rem;
+    width:80%;
+    height:auto;
+
+    background-color:white;
+    animation: down-up .3s;
+}
+
+@media (max-width: 768px) {
+    header .additems .add-forms {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        padding: 1rem;
+    }
+    
+    header .additems .add-forms form {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+    
+    header .additems .add-forms form .field input,
+    header .additems .add-forms form .field select,
+    header .additems .add-forms form .field textarea {
+        width: 100%;
+    }
+    
+    header .additems .add-forms form button[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header .additems .add-forms {
+        padding: 0.5rem;
+    }
+    
+    header .additems .add-forms form {
+        padding: 0.5rem;
+    }
+    
+    header .additems .add-forms form .fields {
+        gap: 0.5rem;
+    }
+    
+    header .additems .add-forms form .field {
+        gap: 0.3rem;
+    }
+    
+    header .additems .add-forms form .field input,
+    header .additems .add-forms form .field select,
+    header .additems .add-forms form .field textarea {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    header .additems .add-forms form .field label {
+        font-size: 0.9rem;
+    }
+    
+    header .additems .add-forms form button[type="submit"] {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+header .additems .add-forms form.active{
+    display: flex;
+}
+
+header .additems .add-forms form .form-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width:100%;
+}
+header .additems .add-forms form .form-top .close-form{
+    background-color:red;
+    color:white;
+    padding:.6rem .77rem;
+    border-radius: 0.2rem;
+
+    outline: none;
+    border:none;
+}
+header .additems .add-forms form .fields {
+    width:100%;
+
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+header .additems .add-forms form .field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap:.5rem;
+
+    width:100%;
+}
+header .additems .add-forms form .field.containers{
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+header .additems .add-forms form .field label{
+    width:auto;
+    font-size: .9rem;
+}
+header .additems .add-forms form .field input,
+header .additems .add-forms form .field select,
+header .additems .add-forms form .field textarea{
+    width:70%;
+    border:solid 2px;
+    outline: none;
+
+    resize: none;
+    padding:.8rem;
+    font-size: .8rem;
+}
+header .additems .add-forms form .field .pricetag{
+    display: flex;
+}
+header .additems .add-forms form .field .pricetag select:nth-child(2){
+    width:50%;
+}
+
+header .additems .add-forms form .field #brand-plus{
+    padding:.3rem .45rem;
+}
+header .additems .add-forms form .field .all-brands{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+    
+    background-color: white;
+    padding:1rem;
+    border:2px solid;
+    border-radius: 1rem;
+}
+
+header .additems .add-forms form .field .all-brands .brands {
+    display: flex;
+    flex-wrap: wrap;
+    gap:.5rem;
+}
+header .additems .add-forms form .field .all-brands .brands button{
+    padding:.4rem .6rem;
+    border:1px solid;
+    background-color: white;
+    border-radius: .5rem;
+}
+
+header .additems .add-forms form button[type="submit"]{
+    padding:0.7rem 1.2rem;
+    width:50%;
+    background: rgba(0,0,0,.08);
+    border:none;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+header .additems .add-forms form button[type="submit"]:hover{
+    background: rgba(0,0,0,.15);
+}
+
+header .additems #add-items {
+    background:var(--color1);
+    outline:none;
+    padding:.6rem .8rem;
+    border:none;
+    color:white;
+}
+
+@media (max-width: 768px) {
+    header .additems #add-items {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .additems #add-items {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+header .addparts #add-part:hover {
+    background-color: var(--color3);
+}
+
+header .additems .add-buttons {
+    position: absolute;
+    transform: translateY(25%) translateX(-7%);
+    z-index: 1;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:.2rem;
+}
+
+@media (max-width: 768px) {
+    header .additems .add-buttons {
+        transform: translateY(25%) translateX(-50%);
+        left: 50%;
+        right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header .additems .add-buttons {
+        transform: translateY(25%) translateX(-50%);
+        left: 50%;
+        right: auto;
+        gap: 0.1rem;
+    }
+    
+    header .additems .add-buttons .btn {
+        padding: 0.3rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+header .additems .add-buttons.hidden {
+    display: none;
+}
+header .additems .add-buttons .btn{
+    padding:.4rem 1.2rem;
+    color:white;
+    background-color: var(--color1);
+    border: 2px solid transparent;
+    outline: none;
+
+    transition: .2s;
+}
+
+header .additems .add-buttons .btn:hover{
+    background-color:var(--color3);
+}
+
+header .additems .add-forms form .field .all-brands .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+header .additems .add-forms form .field .all-brands .top button{
+    padding:.3rem .45rem;
+    background-color: red;
+    border-radius: .2rem;
+    border: none;
+    color: white;
+}
+header .additems .add-forms form .field #brand-plus{
+    padding:.3rem .45rem;
+}
+header .additems .add-forms form .field .all-brands{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap:.5rem;
+    
+    background-color: white;
+    padding:1rem;
+    border:2px solid;
+    border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+    header .additems .add-forms form .field .all-brands {
+        width: 90%;
+        padding: 0.5rem;
+    }
+    
+    header .additems .add-forms form .field .all-brands .brands {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header .additems .add-forms form .field .all-brands {
+        width: 95%;
+        padding: 0.3rem;
+    }
+    
+    header .additems .add-forms form .field .all-brands .brands button {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+header .additems .add-forms form .field .all-brands.active{
+    display:flex;
+}
+
+header .additems .add-forms form .field .all-brands .brands {
+    display: flex;
+    gap:.5rem;
+    width:100%;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+header .additems .add-forms form .field .all-brands .brands button{
+    padding:.4rem .6rem;
+    border:1px solid;
+    background-color: white;
+    border-radius: .5rem;
+    transition: .3s;
+}
+header .additems .add-forms form .field .all-brands .brands button.active{
+    background-color: rgba(0,0,0,.1);
+}
+
+header .additems .add-forms form .field .all-brands #submit-brands {
+    color:white;
+
+    padding:.4rem 1rem;
+    border:none;
+    outline:none;
+    background-color: var(--color1);
+    border-radius: .4rem;
+}
+
+header .additems .add-forms form .field .brands-edit {
+    display: flex;
+    gap:.5rem;
+    align-items: center;
+}
+header .additems .add-forms form .field .brands-edit .selected-brands {
+    display: flex;
+    gap:.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    header .additems .add-forms form .field .brands-edit .selected-brands {
+        max-height: 150px;
+    }
+    
+    header .additems .add-forms form .field .brands-edit .selected-brands button.selected-brand-btn {
+        flex: 1 1 auto;
+        min-width: 120px;
+        padding: 0.3rem 0.5rem;
+    }
+    
+    header .additems .add-forms form .field .brands-edit .selected-brands button.selected-brand-btn input {
+        width: 4rem;
+        padding: 0.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .additems .add-forms form .field .brands-edit .selected-brands {
+        max-height: 200px;
+    }
+    
+    header .additems .add-forms form .field .brands-edit .selected-brands button.selected-brand-btn {
+        min-width: 100px;
+        padding: 0.2rem 0.4rem;
+        font-size: 0.8rem;
+    }
+    
+    header .additems .add-forms form .field .brands-edit .selected-brands button.selected-brand-btn input {
+        width: 3rem;
+        padding: 0.1rem;
+        font-size: 0.7rem;
+    }
+}
+header .additems .add-forms form .field .brands-edit
+.selected-brands button.selected-brand-btn{
+    padding:.4rem .6rem;
+    border:1px solid;
+    background-color: white;
+    border-radius: .5rem;
+    transition: .3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:.3rem;
+    flex-wrap: wrap;
+}
+header .additems .add-forms form .field .brands-edit
+.selected-brands button.selected-brand-btn .brand-name{
+    margin-right:.7rem;
+
+}
+header .additems .add-forms form .field .brands-edit
+.selected-brands button.selected-brand-btn button{
+    font-size: .7rem;
+    border-radius: 100%;
+    padding:.1rem .25rem;
+    border:none;
+    background-color: transparent;
+    color:black;
+    transition: .3s;
+}
+header .additems .add-forms form .field .brands-edit
+.selected-brands button.selected-brand-btn button:hover{
+    transform: scale(130%);
+}
+header .additems .add-forms form .field .brands-edit
+.selected-brands button.selected-brand-btn input{
+    width:5rem;
+    border:none;
+    outline: none;
+    border-left: solid 1px;
+    text-align: center;
+}
+
+.msg-box {
+    z-index:5;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:1.5rem;
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    box-shadow: 0 0 6px 1px rgba(0,0,0,.3);
+    width:40%;
+
+    padding-bottom:1rem;
+    padding-inline:2rem;
+}
+
+@media (max-width: 768px) {
+    .msg-box {
+        width: 80%;
+        padding: 1rem;
+    }
+    
+    .msg-box p.box-msg {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .msg-box button.close-box {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .msg-box {
+        width: 90%;
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+    
+    .msg-box .box-title {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .msg-box p.box-msg {
+        font-size: 0.9rem;
+    }
+    
+    .msg-box button.close-box {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+.msg-box.active {
+    display: flex;
+}
+
+.msg-box .box-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    padding:1rem;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    width:100%;
+}
+
+.msg-box p.box-msg{
+    font-size: 1.2rem;
+}
+.msg-box button.close-box{
+    padding:.3rem 2rem;
+    font-size: 1rem;
+    outline:none;
+    border:none;
+    background-color: var(--color1);
+    color:white;
+    transition: .3s;
+}
+.msg-box button.close-box:hover{
+    background-color: var(--color3);
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+    header .hamburger-menu {
+        display: block;
+    }
+    
+    header .nav-bar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 10;
+    }
+    
+    header .nav-bar.show {
+        display: flex;
+    }
+    
+    header .nav-bar .nav-btn {
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+    
+    header .nav-bar .nav-btn:last-child {
+        border-bottom: none;
+    }
+    
+    header {
+        position: relative;
+    }
+}

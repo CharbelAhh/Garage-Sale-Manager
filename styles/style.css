@@ -1,0 +1,133 @@
+@import url("headerStyle.css?v=2");
+@import url("mainStyle.css?v=1");
+@import url("invtStyle.css?v=1");
+@import url("RepStyle.css?v=102");
+@import url("orderStyle.css?v=6");
+@import url("manageStyle.css?v=557");
+
+:root {
+    --color1: rgb(52, 152, 219);
+    --color2: rgb(235,239,239);
+    --color3: rgb(2, 112, 179);
+}
+
+@font-face {
+    font-family: "inter-light";
+    src: url("../fonts/Inter_18pt-Light.ttf");
+}
+
+@font-face {
+    font-family: "inter-regular";
+    src: url("../fonts/Inter_18pt-regular.ttf");
+}
+
+@font-face {
+    font-family: "inter-bold";
+    src: url("../fonts/Inter_18pt-semibold.ttf");
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+    font-family: "inter-regular";
+}
+
+body {
+    background-blend-mode:lighten;
+    background-image:url("../bg.jpg");
+    background-color: rgba(255,255,255,.7);
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+
+    height:100vh;
+}
+
+button {
+    cursor:pointer;
+}
+
+@media (max-width:700px) {
+    body {
+        height:auto;
+    }
+
+    main #stock-rate .item {
+        width:40%;
+    }
+
+    main #stock-update {
+        overflow-x: scroll;
+    }
+    
+    main #stock-update .options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    main #stock-update .options h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main #stock-rate {
+        gap: 1rem;
+    }
+    
+    main #stock-rate .item {
+        width: 100%;
+        height: 8rem;
+    }
+    
+    main #stock-rate .amt-nb {
+        font-size: 1.5rem;
+    }
+    
+    main #stock-rate .name {
+        font-size: 0.9rem;
+        transform: translateY(-30px);
+    }
+    
+    main #stock-update .options {
+        align-items: center;
+    }
+    
+    main #stock-update .options h1 {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+main {
+    animation:no-overflow 1s;
+}
+/* section {
+    animation:down-up 0.5s;
+} */
+
+@keyframes down-up {
+    from {
+        transform: translateY(50%);
+    }
+}
+@keyframes no-overflow{
+    from {
+        overflow-y: hidden;
+    }
+}
+
+@keyframes slide-left{
+    from {
+        transform: translateX(100%);
+    }
+}
+@keyframes slide-right{
+    from {
+        transform: translateX(-100%);
+    }
+}
