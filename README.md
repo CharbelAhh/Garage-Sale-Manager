@@ -23,7 +23,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/CharbelAhh/Garage-Sale-Manager.git](https://github.com/CharbelAhh/Garage-Sale-Manager.git)
+   git clone https://github.com/CharbelAhh/Garage-Sale-Manager.git
    ```
    
 2. **Database Setup:**
