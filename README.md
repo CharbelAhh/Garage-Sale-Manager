@@ -35,4 +35,18 @@ To run this project locally, follow these steps:
    - Move the folder to your local server directory (e.g. htdocs for XAMPP or www for WAMP).
    - Open your browser and navigate to http://localhost/YourRepoName.
 
+## Features & Interface Preview
+
+### 1. Financial Analytics & Monthly Reports
+Overview of monthly total gains, daily averages, top-selling inventory, and customer activity metrics.
+![Financial Reports](https://github.com/user-attachments/assets/5b601ccb-ec39-4c9e-9939-307fd789de94)
+
+### 2. Smart Inventory Management & Filtering
+Multi-field filtering (Category, Brand, Description) alongside real-time stock status indicators.
+![Inventory Filter](https://github.com/user-attachments/assets/71e9a890-abaf-4f4c-b827-e0f1d65779ba)
+
+### 3. Detailed Order & Profit Tracking
+Itemized order summaries featuring unit pricing, gross totals, and net profit calculations.
+![Order Tracking](https://github.com/user-attachments/assets/b885c049-4eb1-476e-aae9-bb2329eda21f)
+
 ***Origin:** This application was originally created and delivered as a custom freelancing project in August 2025.*
